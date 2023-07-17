@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 readme = "README.md"
 license = "MIT OR Apache-2.0"
-keywords = ["neural network"]
+keywords = ["neural","network"]
 description = "subprogram library for an artificial neural network"
 repository = "https://github.com/TemirlanSatvaldinov/ncore"
 [dependencies]
