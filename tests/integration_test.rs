@@ -1,4 +1,4 @@
-use ncore;
+use aicore;
 
 
 #[test]
@@ -12,7 +12,7 @@ fn rotate_matrix_180() {
                                   3.0f32, 2.0f32, 1.0f32];
 
     let mut dst  = vec![0.0f32;3 * 3]; 
-    ncore::matrix::shape::rotate_matrix180(&src, 3, 3, &mut dst);
+    aicore::matrix::shape::rotate_matrix180(&src, 3, 3, &mut dst);
     assert_eq!(expected,dst)
 }
 #[test]
@@ -26,6 +26,6 @@ fn transpose_matrix() {
                                   3.0f32, 6.0f32, 9.0f32,];
 
     let mut dst  = vec![0.0f32;3 * 3]; 
-    ncore::matrix::shape::transpose_matrix(&src, 3, 3, &mut dst);
+    aicore::matrix::shape::transpose_matrix(&src, 3, 3, &mut dst);
     assert_eq!(expected,dst)
 }
