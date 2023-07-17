@@ -2,7 +2,7 @@ pub fn add(left: usize, right: usize) -> usize {
     left + right
 }
 
-
+pub mod sgd;
 pub mod function;
 pub mod matrix;
 use  matrix::mul::matrix_mul;
