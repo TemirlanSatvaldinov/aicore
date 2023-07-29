@@ -5,7 +5,7 @@ pub fn add(left: usize, right: usize) -> usize {
 pub mod sgd;
 pub mod function;
 pub mod matrix;
- 
+mod simd; 
 #[cfg(test)]
 mod tests {
     use super::*;

@@ -1,4 +1,4 @@
-use std::{f32::INFINITY};
+use std::f32::INFINITY;
 
 
 
