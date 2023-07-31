@@ -13,21 +13,21 @@ pub fn matrix_mul(a:& [f32],row_a:usize,col_a:usize,b:&[f32],row_b:usize,col_b:u
             
         }
     }        
-    matrix_mul_fallback(a, row_a, b, row_b, col_b, c)
+    matrix_mul_fallback(row_a,col_a,col_b,a,b,c)
     
 }
 
-pub fn matrix_mul_fallback(a:& [f32],row_a:usize,b:&[f32],row_b:usize,col_b:usize,c:&mut [f32]) {
+pub fn matrix_mul_fallback(m:usize,k:usize,n:usize,a:& [f32],b:&[f32],c:&mut [f32]) {
 
-    for i in 0..row_a {
-        let  c_slice = &mut c[i*col_b..];
-        for j in 0..col_b {
+    for i in 0..m {
+        let  c_slice = &mut c[i*n..];
+        for j in 0..n {
             c_slice[j] = 0.0;
         }
-        for k in 0..row_b {
-            let b_slice = &b[k*col_b..];
-            let x = a[i*row_b+k];
-            for j in 0..col_b {
+        for p in 0..k {
+            let b_slice = &b[p*n..];
+            let x = a[i*k+p];
+            for j in 0..n {
                 c_slice[j] += x *b_slice[j]
             }
         }

@@ -29,3 +29,6 @@ fn transpose_matrix() {
     aicore::matrix::shape::transpose_matrix(&src, 3, 3, &mut dst);
     assert_eq!(expected,dst)
 }
+
+
+
